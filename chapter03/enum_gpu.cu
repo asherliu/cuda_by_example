@@ -47,6 +47,8 @@ int main( void ) {
         printf( "   --- MP Information for device %d ---\n", i );
         printf( "Multiprocessor count:  %d\n",
                     prop.multiProcessorCount );
+        printf( "maxThreadsPerMultiProcessor:  %d\n",
+                    prop.maxThreadsPerMultiProcessor );
         printf( "Shared mem per mp:  %ld\n", prop.sharedMemPerBlock );
         printf( "Registers per mp:  %d\n", prop.regsPerBlock );
         printf( "Threads in warp:  %d\n", prop.warpSize );
