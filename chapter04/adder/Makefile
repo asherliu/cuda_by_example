@@ -1,7 +1,8 @@
 exe=bfs.bin
 
-commflags= --compiler-options -Wall -Xptxas -v -Xcudafe -\# --maxrregcount 32 -keep -keep-dir ./intermediate/ -src-in-ptx
-#commflags=--ptx
+commflags= --compiler-options -Wall -Xptxas -v -Xcudafe -\# --maxrregcount 32 
+commflags+= -dryrun
+commflags+= -keep -keep-dir ./intermediate_c0/ 
 cucc= "$(shell which nvcc)"
 cc= "$(shell which gcc)"
 cuflags= -arch=sm_35  $(commflags) #-Xptxas -dlcm=cg#disable l1 cache
