@@ -1,6 +1,6 @@
 exe=bfs.bin
 
-commflags= --compiler-options -Wall -Xptxas -v -Xcudafe -\# --maxrregcount 32 
+commflags= --compiler-options -Wall -Xptxas -v -Xcudafe -\# --maxrregcount 32 -keep -keep-dir ./intermediate/ -src-in-ptx
 #commflags=--ptx
 cucc= "$(shell which nvcc)"
 cc= "$(shell which gcc)"
